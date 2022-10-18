@@ -1,0 +1,14 @@
+from bs4 import BeautifulSoup
+import os
+import pandas as pd
+import numpy as np
+
+import requests
+from time import strftime
+
+
+response = requests.get("https://www.caranddriver.com/news/")
+soup = BeautifulSoup(response.text)
+
+
+print(soup.prettify())
